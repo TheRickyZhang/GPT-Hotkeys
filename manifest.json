@@ -6,8 +6,8 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["scripting", "webNavigation", "storage", "activeTab", "tabs"],
-  "host_permissions": ["https://example.com/*"],
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://chat.openai.com/*"],
   "icons": {
     "16": "icon128.png",
     "32": "icon128.png",
