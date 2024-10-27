@@ -1,8 +1,8 @@
 {
-  "name": "Scripting API Demo",
+  "name": "GPT-Hotkeys",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Uses the chrome.scripting API to inject JavaScript into web pages.",
+  "description": "Various hotkeys for ChatGPT, including editing, sending, and canceling messages.",
   "background": {
     "service_worker": "background.js"
   },
@@ -38,7 +38,7 @@
       "suggested_key": {
         "default": "Ctrl+Shift+F"
       },
-      "description": "Send edited message with keys instead of clicking enter"
+      "description": "Send edited message"
     },
     "gpt-quickcancel": {
       "suggested_key": {
