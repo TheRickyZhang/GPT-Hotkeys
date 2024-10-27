@@ -1,0 +1,50 @@
+{
+  "name": "Scripting API Demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Uses the chrome.scripting API to inject JavaScript into web pages.",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "webNavigation", "storage", "activeTab", "tabs"],
+  "host_permissions": ["https://example.com/*"],
+  "icons": {
+    "16": "icon128.png",
+    "32": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon128.png",
+      "32": "icon128.png",
+      "48": "icon128.png"
+    }
+  },
+  "commands": {
+    "gpt-quickedit": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Jump to nearest edit prompt"
+    },
+    "gpt-quickinsert": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X"
+      },
+      "description": "Jump to search bar"
+    },
+    "gpt-quicksend": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      },
+      "description": "Send edited message with keys instead of clicking enter"
+    },
+    "gpt-quickcancel": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Z"
+      },
+      "description": "Cancel editing message"
+    }
+  }
+}
