@@ -5,11 +5,10 @@ if (document.readyState === "complete") {
 }
 
 function runScript() {
-  const editButton = document.querySelector('button[aria-label="Edit message"]');
-  if (editButton) {
-    editButton.click();
+  const editButtons = document.querySelectorAll('button[aria-label="Edit message"]');
+  if (editButtons.length > 0) {
+    editButtons[editButtons.length - 1].click();
   } else {
     console.log("Edit button not found!");
   }
 }
-  
