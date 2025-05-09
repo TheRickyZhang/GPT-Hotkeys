@@ -1,24 +1,24 @@
 {
   "name": "GPT-Hotkeys",
-  "version": "1.0",
+  "version": "1.2",
   "manifest_version": 3,
   "description": "Various hotkeys for ChatGPT, including editing, sending, and canceling messages.",
   "background": {
     "service_worker": "background.js"
   },
   "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://chat.openai.com/*"],
+  "host_permissions": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
   "icons": {
-    "16": "icon128.png",
-    "32": "icon128.png",
-    "48": "icon128.png",
-    "128": "icon128.png"
+    "16": "icons/icon128.png",
+    "32": "icons/icon128.png",
+    "48": "icons/icon128.png",
+    "128": "icons/icon128.png"
   },
   "action": {
     "default_icon": {
-      "16": "icon128.png",
-      "32": "icon128.png",
-      "48": "icon128.png"
+      "16": "icons/icon128.png",
+      "32": "icons/icon128.png",
+      "48": "icons/icon128.png"
     }
   },
   "commands": {
@@ -46,5 +46,12 @@
       },
       "description": "Cancel editing message"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+      "js": ["choosemodel.js","quickedit.js","quickinsert.js","quicksend.js","quickcancel.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }

@@ -1,0 +1,24 @@
+{
+  "name": "gpt-hotkeys",
+  "version": "1.0.0",
+  "description": "This is a simple extension that provides some shortcuts for common ChatGPT actions that don't have one. You can find it on the Chrome web store here: [GPT-Hotkeys](https://chromewebstore.google.com/detail/gpt-hotkeys/hmnopbffkafhmkojgmcolhlkeghmngcn)",
+  "main": "background.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.mjs",
+    "watch": "webpack --watch --config webpack.config.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/chrome": "^0.0.320",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
+  }
+}

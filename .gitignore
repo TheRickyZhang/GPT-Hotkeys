@@ -1,0 +1,10 @@
+/node_modules/
+/dist.zip
+/dist/**/*.map
+
+.DS_Store
+.vscode/
+*.swp
+
+npm-debug.log*
+yarn-debug.log*

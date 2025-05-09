@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ESNext",
+        "lib": ["ES2021", "DOM", "WebWorker"],   // DOM for content scripts, WebWorker for background service_worker
+        "types": ["chrome"],
+        "strict": true,
+        "outDir": "dist", 
+        "sourceMap": true
+    },
+    "include": ["src/**/*"],
+    "exclude": [
+        "node_modules"
+    ]
+}
